@@ -12,10 +12,9 @@ All copyright reserved @Nimesh Vasani
 
 My Cooking Gallary app is all about thoousand of tasty food recipes.
 
-![alt text](https://github.com/NimeshVasani/My_Cooking_Gallary/blob/main/snapshots/final_snap_shot.png)
-
-
 Built with  : [MVVM](https://developer.android.com/topic/libraries/architecture/viewmodel?gclid=CjwKCAjw5dqgBhBNEiwA7PryaEGGNXBuF_269i5vAml9SedixRgYXYfktdB8NOZm__qJWmdN6hpUahoC2IQQAvD_BwE&gclsrc=aw.ds#kotlin_1), [Retrofit](https://square.github.io/retrofit/), [Room](https://developer.android.com/training/data-storage/room) and [Dagger Hilt](https://developer.android.com/training/dependency-injection/hilt-android) with Proper [Navigation UI](https://developer.android.com/guide/navigation/navigation-getting-started).
+
+![alt text](https://github.com/NimeshVasani/My_Cooking_Gallary/blob/main/snapshots/final_snap_shot.png)
 
 App use tasty food Api from Rapid Api developers where you need to sign in and generate your own Api key.
 
