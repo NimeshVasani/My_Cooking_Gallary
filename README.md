@@ -10,4 +10,4 @@ App use tasty food Api from Rapid Api developers where you need to sign in and g
 
 To Update Api key in project to make it work follow the step : goto "others" package > goto "Constant.kt" class < update the value of "const val API_Key"
 
-![alt text]([My_Cooking_Gallary](https://github.com/NimeshVasani/My_Cooking_Gallary/blob/main/ss1.png)
+![alt text](https://github.com/NimeshVasani/My_Cooking_Gallary/blob/main/ss1.png)
