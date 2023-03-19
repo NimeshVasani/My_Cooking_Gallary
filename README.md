@@ -2,7 +2,7 @@
 
 All copyright reserved @Nimesh Vasani 
 
-[GitHub Pages(https://github.com/NimeshVasani)
+[GitHub Pages](https://github.com/NimeshVasani)
 
 # About The App
 
