@@ -1,7 +1,7 @@
 #Developer Info
 
 All copyright reserved @Nimesh Vasani 
-![alt text](https://github.com/NimeshVasani)
+[GitHub Pages(https://github.com/NimeshVasani)
 
 # About The App
 
