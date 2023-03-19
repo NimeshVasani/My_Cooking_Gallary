@@ -1,0 +1,5 @@
+goto "other" packege
+then goto "Constant.kt" class 
+and paste your Api key 
+
+const val API_KEY = "PASTE YOUR API KEY"
