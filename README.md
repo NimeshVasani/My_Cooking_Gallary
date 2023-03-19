@@ -15,7 +15,7 @@ My Cooking Gallary app is all about thoousand of tasty food recipes.
 ![alt text](https://github.com/NimeshVasani/My_Cooking_Gallary/blob/main/snapshots/final_snap_shot.png)
 
 
-Built with MVVM, Retrofit, Kotlin, Room and Dagger Hilt with Proper Navigation UI.
+Built with  : [MVVM](https://developer.android.com/topic/libraries/architecture/viewmodel?gclid=CjwKCAjw5dqgBhBNEiwA7PryaEGGNXBuF_269i5vAml9SedixRgYXYfktdB8NOZm__qJWmdN6hpUahoC2IQQAvD_BwE&gclsrc=aw.ds#kotlin_1), Retrofit, Kotlin, Room and Dagger Hilt with Proper Navigation UI.
 
 App use tasty food Api from Rapid Api developers where you need to sign in and generate your own Api key.
 
