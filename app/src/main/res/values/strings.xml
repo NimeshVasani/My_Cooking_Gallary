@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">My Cooking Gallary</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_discover">Discover</string>
+    <string name="title_guides">Guides</string>
+    <string name="title_bag">My Bag</string>
+    <string name="title_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="search_hint">Discover Tasty Food</string>
+
+
+    // Discover Item TextView Resources
+    <string name="item_layout1">What We’re Loving Now</string>
+    <string name="item_layout2">Recommended For You </string>
+    <string name="item_layout3">Popular Recipes This Week </string>
+    <string name="item_layout4">Try New This Season</string>
+    <string name="item_layout5">Be a Master Chef</string>
+    <string name="dummy_string">We Love Pizza \n Let\'s Try this</string>
+
+    <string name="ingradient_for">Ingradient for </string>
+    <string name="nutrition_info">Nutrition Info</string>
+
+    //some Texts
+
+    <string name="people_likes">% people like this</string>
+    <string name="more">read more…</string>
+
+    <string name="save">Love This?</string>
+    <string name="like">Like</string>
+    <string name="comment">Comment</string>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_discover">
+
+    <fragment
+        android:id="@+id/navigation_discover"
+        android:name="diamondcraft.devs.mycookinggallary.ui.discover.DiscoverFragment"
+        android:label="@string/title_discover"
+        tools:layout="@layout/fragment_discover">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_guides"
+        android:name="diamondcraft.devs.mycookinggallary.ui.guides.GuidesFragment"
+        android:label="@string/title_guides"
+        tools:layout="@layout/fragment_guides">
+        <action
+            android:id="@+id/action_navigation_guides_to_navigation_discover"
+            app:destination="@id/navigation_discover" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_my_bag"
+        android:name="diamondcraft.devs.mycookinggallary.ui.bag.MyBagFragment"
+        android:label="@string/title_bag"
+        tools:layout="@layout/fragment_my_bag">
+        <action
+            android:id="@+id/action_navigation_my_bag_to_navigation_discover"
+            app:destination="@id/navigation_discover" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="diamondcraft.devs.mycookinggallary.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_discover"
+            app:destination="@id/navigation_discover" />
+    </fragment>
+    <fragment
+        android:id="@+id/cookingResult"
+        android:name="diamondcraft.devs.mycookinggallary.ui.CookingResult"
+        android:label="fragment_cooking_result"
+        tools:layout="@layout/fragment_cooking_result" >
+
+        <action
+            android:id="@+id/action_cookingResult_to_navigation_discover3"
+            app:destination="@id/navigation_discover" />
+    </fragment>
+</navigation>
