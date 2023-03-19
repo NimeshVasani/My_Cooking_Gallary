@@ -28,6 +28,6 @@ object Constants {
     const val TABLE_NAME = "Cooking_table"
 
     const val BASE_URL = "https://tasty.p.rapidapi.com/"
-    const val API_KEY = "YOUR_API_KEY"
+    const val API_KEY = "PASTE_YOUR_API_KEY"
 }
 ```
