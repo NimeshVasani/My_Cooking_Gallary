@@ -12,7 +12,7 @@ import retrofit2.http.Query
 interface CookingApi {
 
     @Headers(
-        "X-RapidAPI-Key: ebaab27037msh88758eaa457c9f3p1a0b33jsn4f4a19666280",
+        "X-RapidAPI-Key: $API_KEY",
         "X-RapidAPI-Host: tasty.p.rapidapi.com"
     )
     @GET("recipes/list")
@@ -23,7 +23,7 @@ interface CookingApi {
     ): Response<CookingResponse>
 
     @Headers(
-        "X-RapidAPI-Key: ebaab27037msh88758eaa457c9f3p1a0b33jsn4f4a19666280",
+        "X-RapidAPI-Key: $API_KEY",
         "X-RapidAPI-Host: tasty.p.rapidapi.com"
     )
     @GET("feeds/list")

@@ -166,6 +166,7 @@ class CookingResultActivity : AppCompatActivity() {
                         string =
                             component.measurements?.get(component.measurements!!.size - 1)?.quantity
                                 ?: "¼"
+                        Log.d("numFormat",string.plus("n"))
                         listIngradient.add(
                             IngradientData(
                                 name = component.ingredient?.name,
