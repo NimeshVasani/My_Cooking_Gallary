@@ -1,12 +1,15 @@
-# Copy Right And Developer Info
+#Developer Info
 
 All copyright reserved @Nimesh Vasani 
+![alt text](https://github.com/NimeshVasani)
 
 # About The App
 
 My Cooking Gallary app is all about thoousand of tasty food recipes.
 
 ![alt text](https://github.com/NimeshVasani/My_Cooking_Gallary/blob/main/snapshots/final_snap_shot.png)
+
+
 Built with MVVM, Retrofit, Kotlin, Room and Dagger Hilt with Proper Navigation UI.
 
 App use tasty food Api from Rapid Api developers where you need to sign in and generate your own Api key.
