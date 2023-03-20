@@ -149,7 +149,7 @@ sealed class Resources<T>(
 
 All [Adapters](app/src/main/java/diamondcraft/devs/mycookinggallary/adapters) built with diffUtil, so we can submit data as it load by viewModel Observers.
 
-diffUtil Setup in Adapter.kt class
+diffUtil Setup in Adapter.kt class.
 i.e.
 
 ```kotlin
@@ -169,7 +169,7 @@ i.e.
 
     var asyncDiffer: AsyncListDiffer<Cooking> = AsyncListDiffer(this, differCallback)
 ```
-and in Activity/Fragment class
+and in Activity/Fragment class...
 ```kotlin
  adapter.differ.submitList(YOUR_LIST)
  ```
