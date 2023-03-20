@@ -43,4 +43,4 @@ As a Dependency injection We use Dagger Hilt to set Up Singlton Object Pattern T
 in the `di` package we have 2 modules : 1. [ApiModule](app/src/main/java/diamondcraft/devs/mycookinggallary/di/ApiModule.kt)
  and 2. [AppModule](app/src/main/java/diamondcraft/devs/mycookinggallary/di/AppModule.kt)
 
-We do have different types of [Models](app/src/main/java/diamondcraft/devs/mycookinggallary/Models) for Handling Api Data set.
+We do have different types of [Models](app/src/main/java/diamondcraft/devs/mycookinggallary/models) for Handling Api Data set.
