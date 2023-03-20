@@ -36,3 +36,7 @@ object Constants {
 This app use MVVM architecture skeleton and room database for saving recipes in local database.
 
 ![alt text](https://github.com/NimeshVasani/My_Cooking_Gallary/blob/main/snapshots/architecture.png)
+
+As a Dependency injection We use Dagger Hilt to set Up Singlton Object Pattern Through whole Project.
+
+[Constants]
