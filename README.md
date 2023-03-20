@@ -39,6 +39,8 @@ This app use MVVM architecture skeleton and room database for saving recipes in 
 ![alt text](https://github.com/NimeshVasani/My_Cooking_Gallary/blob/main/snapshots/architecture.png)
 
 As a Dependency injection We use Dagger Hilt to set Up Singlton Object Pattern Through whole Project.
+
 in the `di` package we have 2 modules : 1. [ApiModule](app/src/main/java/diamondcraft/devs/mycookinggallary/di/ApiModule.kt)
  and 2. [AppModule](app/src/main/java/diamondcraft/devs/mycookinggallary/di/AppModule.kt)
-) 
+
+We do have different types of [Models](app/src/main/java/diamondcraft/devs/mycookinggallary/Models) for Handling Api Data set.
