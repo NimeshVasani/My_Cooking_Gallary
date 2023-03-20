@@ -174,6 +174,7 @@ and in Activity/Fragment class...
  adapter.differ.submitList(YOUR_LIST)
  ```
 
+# Thank You for Your Interest!! Enjoy.. 
 
-
+Dm for inquires/Collaboration [Nimesh Vasani](https://www.linkedin.com/in/nimesh-vasani-99b642154)
 
