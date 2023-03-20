@@ -67,4 +67,4 @@ fun fromVulgarFraction(number1: String): Double {
             number.toDouble()
         }
     }
-    ```
+  ```
