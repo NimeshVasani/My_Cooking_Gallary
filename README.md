@@ -18,7 +18,8 @@ Built with  : [MVVM](https://developer.android.com/topic/libraries/architecture/
 
 App use [tasty food Api from Rapid Api](https://rapidapi.com/apidojo/api/tasty/), where you need to sign in and generate your own Api key.
 
-To Update Api key in project to make it work follow the step : goto `"others"  package > goto "Constant.kt" class > update the value of "const val API_Key"`
+To Update Api key in project to make it work follow the step : goto `"others"  package > goto "Constant.kt" class > update the value of "const val API_Key"` [Constants.kt](app/src/main/java/diamondcraft/devs/mycookinggallary/other/Constants.kt)
+
 
 ```ruby
 package diamondcraft.devs.mycookinggallary.other
@@ -39,4 +40,3 @@ This app use MVVM architecture skeleton and room database for saving recipes in 
 
 As a Dependency injection We use Dagger Hilt to set Up Singlton Object Pattern Through whole Project.
 
-[Constants.kt](app/src/main/java/diamondcraft/devs/mycookinggallary/other/Constants.kt)
