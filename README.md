@@ -21,7 +21,7 @@ App use [tasty food Api from Rapid Api](https://rapidapi.com/apidojo/api/tasty/)
 To Update Api key in project to make it work follow the step : goto `"others"  package > goto "Constant.kt" class > update the value of "const val API_Key"` [Constants.kt](app/src/main/java/diamondcraft/devs/mycookinggallary/other/Constants.kt)
 
 
-```
+```kotlin
 package diamondcraft.devs.mycookinggallary.other
 
 object Constants {
