@@ -107,9 +107,9 @@ interface CookingApi {
 }
 ```
 
-To handle Response We created Some functions in [Repository](app/src/main/java/diamondcraft/devs/mycookinggallary/repositories/CookingRepository).
+To handle Response We created Some functions in [Repository](app/src/main/java/diamondcraft/devs/mycookinggallary/repositories/CookingRepository.kt).
 
-And Load particular Data As a live Data in [ViewModels](app/src/main/java/diamondcraft/devs/mycookinggallary/viewmodels/CookingViewModel) we create different fucntions. for ex : 
+And Load particular Data As a live Data in [ViewModels](app/src/main/java/diamondcraft/devs/mycookinggallary/viewmodels/CookingViewModel.kt) we create different fucntions. for ex : 
 ```kotlin
     private fun handleAllRecipesResponse(response: Response<CookingResponse>): Resources<CookingResponse> {
         if (response.isSuccessful) {
