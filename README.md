@@ -34,4 +34,5 @@ object Constants {
 
 # Architecture & Work-Flow
 This app use MVVM architecture skeleton and room database for saving recipes in local database.
-![alt text]()
+
+![alt text](https://github.com/NimeshVasani/My_Cooking_Gallary/blob/main/snapshots/architecture.png)
