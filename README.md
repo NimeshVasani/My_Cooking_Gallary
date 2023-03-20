@@ -145,3 +145,35 @@ sealed class Resources<T>(
     class Loading<T> : Resources<T>()
 }
 ```
+# Adapters for RecyclerViews 
+
+All [Adapters](app/src/main/java/diamondcraft/devs/mycookinggallary/adapters) built with diffUtil, so we can submit data as it load by viewModel Observers.
+
+diffUtil Setup in Adapter.kt class
+i.e.
+
+```kotlin
+  private var differCallback = object : DiffUtil.ItemCallback<Cooking>() {
+        override fun areItemsTheSame(
+            oldItem: Cooking, newItem: Cooking
+        ): Boolean {
+            return oldItem.name == newItem.name
+        }
+
+        override fun areContentsTheSame(
+            oldItem: Cooking, newItem: Cooking
+        ): Boolean {
+            return oldItem == newItem
+        }
+    }
+
+    var asyncDiffer: AsyncListDiffer<Cooking> = AsyncListDiffer(this, differCallback)
+```
+and in Activity/Fragment class
+```kotlin
+ adapter.differ.submitList(YOUR_LIST)
+ ```
+
+
+
+
