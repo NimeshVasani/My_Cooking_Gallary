@@ -68,3 +68,68 @@ fun fromVulgarFraction(number1: String): Double {
         }
     }
   ```
+# Api Response and Room Database 
+### Cooking Api class
+```kotlin
+package diamondcraft.devs.mycookinggallary.api
+
+import diamondcraft.devs.mycookinggallary.models.CookingFeedResponse
+import diamondcraft.devs.mycookinggallary.models.CookingResponse
+import diamondcraft.devs.mycookinggallary.models.FeedResponseInner
+import diamondcraft.devs.mycookinggallary.other.Constants.API_KEY
+import retrofit2.Response
+import retrofit2.http.GET
+import retrofit2.http.Headers
+import retrofit2.http.Query
+
+interface CookingApi {
+
+    @Headers(
+        "X-RapidAPI-Key: $API_KEY",
+        "X-RapidAPI-Host: tasty.p.rapidapi.com"
+    )
+    @GET("recipes/list")
+    suspend fun getAllRecipes(
+        @Query("size")
+        size: Int = 300
+
+    ): Response<CookingResponse>
+
+    @Headers(
+        "X-RapidAPI-Key: $API_KEY",
+        "X-RapidAPI-Host: tasty.p.rapidapi.com"
+    )
+    @GET("feeds/list")
+    suspend fun getAllFeeds(
+        @Query("X-RapidAPI-Key")
+        apiKey: String = API_KEY
+    ): Response<CookingFeedResponse>
+}
+```
+
+To handle Response We created Some functions in [Repository](app/src/main/java/diamondcraft/devs/mycookinggallary/repositories/CookingRepository).
+
+And Load particular Data As a live Data in [ViewModels](app/src/main/java/diamondcraft/devs/mycookinggallary/viewmodels/CookingViewModel) we create different fucntions. for ex : 
+```kotlin
+    private fun handleAllRecipesResponse(response: Response<CookingResponse>): Resources<CookingResponse> {
+        if (response.isSuccessful) {
+            response.body()?.let { cookingResponse ->
+
+                if (allRecipesResponse == null) {
+                    allRecipesResponse = cookingResponse
+                } else {
+                    val oldRecipes = allRecipesResponse?.results
+                    val newRecipes = cookingResponse.results
+
+                    oldRecipes?.addAll(newRecipes)
+
+                }
+                Log.d("response", response.body().toString())
+                return Resources.Success(allRecipesResponse ?: cookingResponse)
+            }
+        }
+        Log.d("response", "fail")
+
+        return Resources.Error(response.message())
+    }
+```
