@@ -176,5 +176,5 @@ and in Activity/Fragment class...
 
 # Thank You for Your Interest!! Enjoy. 
 
-Dm for inquires/Collaboration [Nimesh Vasani](https://www.linkedin.com/in/nimesh-vasani-99b642154)
+Dm for inquiries/Collaboration [Nimesh Vasani](https://www.linkedin.com/in/nimesh-vasani-99b642154)
 
