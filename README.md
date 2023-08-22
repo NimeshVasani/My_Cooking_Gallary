@@ -10,7 +10,7 @@ All copyright reserved @Nimesh Vasani
 
 # About The App
 
-My Cooking Gallary app is all about thoousand of tasty food recipes.
+My Cooking Gallary app is all about thousands of tasty food recipes.
 
 Built with  : [MVVM](https://developer.android.com/topic/libraries/architecture/viewmodel?gclid=CjwKCAjw5dqgBhBNEiwA7PryaEGGNXBuF_269i5vAml9SedixRgYXYfktdB8NOZm__qJWmdN6hpUahoC2IQQAvD_BwE&gclsrc=aw.ds#kotlin_1), [Retrofit](https://square.github.io/retrofit/), [Room](https://developer.android.com/training/data-storage/room),[Glide](https://github.com/bumptech/glide) and [Dagger Hilt](https://developer.android.com/training/dependency-injection/hilt-android) with Proper [Navigation UI](https://developer.android.com/guide/navigation/navigation-getting-started).
 
@@ -18,7 +18,7 @@ Built with  : [MVVM](https://developer.android.com/topic/libraries/architecture/
 
 App use [tasty food Api from Rapid Api](https://rapidapi.com/apidojo/api/tasty/), where you need to sign in and generate your own Api key.
 
-To Update Api key in project to make it work follow the step : goto `"others"  package > goto "Constant.kt" class > update the value of "const val API_Key"` [Constants.kt](app/src/main/java/diamondcraft/devs/mycookinggallary/other/Constants.kt)
+To Update the Api key in a project to make it work follow the step: goto `"others"  package > goto "Constant.kt" class > update the value of "const val API_Key"` [Constants.kt](app/src/main/java/diamondcraft/devs/mycookinggallary/other/Constants.kt)
 
 
 ```kotlin
@@ -38,14 +38,14 @@ This app use MVVM architecture skeleton and room database for saving recipes in 
 
 ![alt text](https://github.com/NimeshVasani/My_Cooking_Gallary/blob/main/snapshots/architecture.png)
 
-As a Dependency injection We use Dagger Hilt to set Up Singlton Object Pattern Through whole Project.
+As a Dependency injection, We use Dagger Hilt to set Up Singleton Object Pattern Throughout the whole Project.
 
 in the `di` package we have 2 modules : 1. [ApiModule](app/src/main/java/diamondcraft/devs/mycookinggallary/di/ApiModule.kt)
  and 2. [AppModule](app/src/main/java/diamondcraft/devs/mycookinggallary/di/AppModule.kt)
 
 We do have different types of [Models](app/src/main/java/diamondcraft/devs/mycookinggallary/models) for Handling Api Data set.
 
-## Special Conversion Fuction
+## Special Conversion Function
 ```kotlin
 fun fromVulgarFraction(number1: String): Double {
         val number = number1.filterNot { it.isWhitespace() }
@@ -69,7 +69,7 @@ fun fromVulgarFraction(number1: String): Double {
     }
   ```
 # Api Response and Room Database 
-### Cooking Api class
+### Cooking API class
 ```kotlin
 package diamondcraft.devs.mycookinggallary.api
 
@@ -107,7 +107,7 @@ interface CookingApi {
 }
 ```
 
-To handle Response We created Some functions in [Repository](app/src/main/java/diamondcraft/devs/mycookinggallary/repositories/CookingRepository.kt).
+To handle the Response We created Some functions in [Repository](app/src/main/java/diamondcraft/devs/mycookinggallary/repositories/CookingRepository.kt).
 
 And Load particular Data As a live Data in [ViewModels](app/src/main/java/diamondcraft/devs/mycookinggallary/viewmodels/CookingViewModel.kt) we create different fucntions. for ex : 
 ```kotlin
@@ -133,7 +133,7 @@ And Load particular Data As a live Data in [ViewModels](app/src/main/java/diamon
         return Resources.Error(response.message())
     }
 ```
-Handle Success, Error and Loading State : 
+Handle Success, Error, and Loading State : 
 ```kotlin
 
 sealed class Resources<T>(
@@ -174,7 +174,7 @@ and in Activity/Fragment class...
  adapter.differ.submitList(YOUR_LIST)
  ```
 
-# Thank You for Your Interest!! Enjoy.. 
+# Thank You for Your Interest!! Enjoy. 
 
 Dm for inquires/Collaboration [Nimesh Vasani](https://www.linkedin.com/in/nimesh-vasani-99b642154)
 
