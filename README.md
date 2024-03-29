@@ -2,6 +2,8 @@
 
 All copyright reserved @Nimesh Vasani 
 
+[Nimesh Vasani | Portfolio](https://vasaninimesh0.wixsite.com/nimesh-vasani)
+
 [GitHub Profile](https://github.com/NimeshVasani)
 
 [Linked-In](https://www.linkedin.com/in/nimesh-vasani-99b642154/)
