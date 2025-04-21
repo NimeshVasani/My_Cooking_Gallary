@@ -47,7 +47,9 @@ class CookingResultActivity : AppCompatActivity() {
 
         viewModel.liveSharedData.observe(this) { cooking ->
             this.cooking = cooking
+            Log.d("cooking", cooking.toString())
         }
+
         setUpNutritionRecycler()
         setUpIngradientRecycler()
         setUpInstructionRecycler()
@@ -81,6 +83,7 @@ class CookingResultActivity : AppCompatActivity() {
 
             binding.videoRecipesMain.setOnPreparedListener {
                 mediaController.setAnchorView(binding.videoRecipesMain)
+
             }
             binding.btnVideoStart.setOnClickListener {
                 binding.imgThumbnailView.visibility = View.GONE

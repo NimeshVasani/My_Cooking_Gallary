@@ -12,7 +12,7 @@ import java.util.regex.Pattern
 
 object GlobalFunctions {
     fun fromVulgarFraction(number1: String): Double {
-        val number = number1.filterNot { it.isWhitespace() }
+        val number = number1.filterNot { it.isWhitespace() || it=='.' }
 
         val items = number.split("""\d""".toRegex()).filterNot { it.isEmpty() }
         val mixed: String?
