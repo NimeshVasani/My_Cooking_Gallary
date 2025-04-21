@@ -24,6 +24,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.text.DecimalFormat
+import androidx.core.net.toUri
 
 
 @AndroidEntryPoint
@@ -56,6 +57,9 @@ class CookingResultActivity : AppCompatActivity() {
 //            Toast.makeText(this, relatedCookingData[0].name, Toast.LENGTH_LONG).show()
 
         }
+        binding.backCookingResult.setOnClickListener {
+            finish()
+        }
     }
 
     override fun onStart() {
@@ -66,7 +70,7 @@ class CookingResultActivity : AppCompatActivity() {
             relatedItemList.add(cooking)
             Glide.with(applicationContext).asBitmap().load(cooking.thumbnail_url)
                 .into(binding.imgThumbnailView)
-            binding.videoRecipesMain.setVideoURI(Uri.parse(cooking.video_url))
+            binding.videoRecipesMain.setVideoURI(cooking.video_url?.toUri())
             val mediaController = MediaController(this@CookingResultActivity)
             mediaController.setMediaPlayer(binding.videoRecipesMain)
 

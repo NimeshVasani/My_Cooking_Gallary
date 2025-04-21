@@ -22,4 +22,6 @@ class CookingRepository @Inject constructor(
 
     suspend fun getAllFeeds() : Response<CookingFeedResponse> = api.getAllFeeds()
 
+    suspend fun searchRecipes(query: String) : Response<CookingResponse> = api.searchRecipes(query = query)
+
 }

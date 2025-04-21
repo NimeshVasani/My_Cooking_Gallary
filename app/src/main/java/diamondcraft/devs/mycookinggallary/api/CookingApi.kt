@@ -18,7 +18,7 @@ interface CookingApi {
     @GET("recipes/list")
     suspend fun getAllRecipes(
         @Query("size")
-        size: Int = 300
+        size: Int = 500
 
     ): Response<CookingResponse>
 
@@ -31,4 +31,19 @@ interface CookingApi {
         @Query("X-RapidAPI-Key")
         apiKey: String = API_KEY
     ): Response<CookingFeedResponse>
+
+
+    @Headers(
+        "X-RapidAPI-Key: $API_KEY",
+        "X-RapidAPI-Host: tasty.p.rapidapi.com"
+    )
+    @GET("recipes/list")
+    suspend fun searchRecipes(
+        @Query("X-RapidAPI-Key")
+        apiKey: String = API_KEY,
+        @Query("q")
+        query: String
+    ): Response<CookingResponse>
+
+
 }

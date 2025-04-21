@@ -1,8 +1,9 @@
 package diamondcraft.devs.mycookinggallary.di
 
-import androidx.viewbinding.BuildConfig
+import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.ms.square.android.expandabletextview.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -10,6 +11,7 @@ import dagger.hilt.components.SingletonComponent
 import diamondcraft.devs.mycookinggallary.api.CookingApi
 import diamondcraft.devs.mycookinggallary.db.CookingDAO
 import diamondcraft.devs.mycookinggallary.other.Constants
+import diamondcraft.devs.mycookinggallary.repositories.AuthRepository
 import diamondcraft.devs.mycookinggallary.repositories.CookingRepository
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -64,5 +66,21 @@ object ApiModule {
     @Provides
     fun providesRepository(cookingDAO: CookingDAO, cookingApi: CookingApi) =
         CookingRepository(cookingDAO, cookingApi)
+
+
+    @Singleton
+    @Provides
+    fun provideFirebaseAuth(): FirebaseAuth {
+        return FirebaseAuth.getInstance()
+    }
+
+    @Singleton
+    @Provides
+    fun provideAuthRepository(firebaseAuth: FirebaseAuth): AuthRepository {
+        return AuthRepository(firebaseAuth)
+    }
+
+
+
 
 }

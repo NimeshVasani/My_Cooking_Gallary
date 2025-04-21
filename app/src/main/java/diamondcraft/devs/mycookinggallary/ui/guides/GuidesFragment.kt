@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import diamondcraft.devs.mycookinggallary.BuildConfig
+import com.ms.square.android.expandabletextview.BuildConfig
 import diamondcraft.devs.mycookinggallary.CookingResultActivity
 import diamondcraft.devs.mycookinggallary.adapters.RecyclerGuideAdapter
 import diamondcraft.devs.mycookinggallary.databinding.FragmentGuidesBinding

@@ -8,6 +8,7 @@ import diamondcraft.devs.mycookinggallary.models.CookingFeedResponse
 import diamondcraft.devs.mycookinggallary.models.CookingResponse
 import diamondcraft.devs.mycookinggallary.other.Resources
 import diamondcraft.devs.mycookinggallary.repositories.CookingRepository
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import javax.inject.Inject
@@ -35,6 +36,9 @@ class CookingViewModel @Inject constructor(
 
     var allRecipes: MutableLiveData<Resources<CookingResponse>> = MutableLiveData()
     var allRecipesResponse: CookingResponse? = null
+
+
+    var searchRecipes: MutableStateFlow<Resources<CookingResponse>> = MutableStateFlow<Resources<CookingResponse>>(Resources.Loading())
 
 
     var allFeeds: MutableLiveData<Resources<CookingFeedResponse>> = MutableLiveData()
@@ -117,4 +121,20 @@ class CookingViewModel @Inject constructor(
 
         return Resources.Error(response.message())
     }
+
+
+    fun searchRecipes(query: String) = viewModelScope.launch {
+
+        val response = repository.searchRecipes(query)
+        if (response.isSuccessful) {
+            response.body()?.let { cookingResponse ->
+              searchRecipes.value = Resources.Success(cookingResponse)
+            }
+        }
+        else{
+            searchRecipes.value = Resources.Error(response.message())
+        }
+    }
+
+
 }

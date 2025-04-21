@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.HORIZONTAL
@@ -15,8 +16,8 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
+import com.ms.square.android.expandabletextview.BuildConfig
 import dagger.hilt.android.AndroidEntryPoint
-import diamondcraft.devs.mycookinggallary.BuildConfig
 import diamondcraft.devs.mycookinggallary.CookingResultActivity
 import diamondcraft.devs.mycookinggallary.R
 import diamondcraft.devs.mycookinggallary.adapters.RecyclerDiscoverAdapter
@@ -53,7 +54,7 @@ class DiscoverFragment : Fragment(), java.io.Serializable {
         recommendRecycler = RecyclerDiscoverAdapter()
         setUpRecommendRecyclerView()
 
-       println(fromVulgarFraction("1¼"))
+        println(fromVulgarFraction("1¼"))
 
         weeklyRecycler = RecyclerDiscoverAdapter()
         setUpWeeklyRecycler()
@@ -64,9 +65,14 @@ class DiscoverFragment : Fragment(), java.io.Serializable {
 
         return root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         val staggeredList: MutableList<Cooking> = mutableListOf()
+        binding.inputDiscover.setOnClickListener {
+            findNavController().navigate(R.id.action_navigation_discover_to_searchFragment)
+
+        }
         viewModel.allRecipes.observe(viewLifecycleOwner) { response ->
             when (response) {
                 is Resources.Success -> {
@@ -82,12 +88,14 @@ class DiscoverFragment : Fragment(), java.io.Serializable {
 
                     }
                 }
+
                 is Resources.Error -> {
 
                     response.message?.let { message ->
                         if (BuildConfig.DEBUG) Log.d("response", "error$message")
                     }
                 }
+
                 is Resources.Loading -> {
                 }
             }
@@ -164,12 +172,14 @@ class DiscoverFragment : Fragment(), java.io.Serializable {
 
                     }
                 }
+
                 is Resources.Error -> {
 
                     response.message?.let { message ->
                         if (BuildConfig.DEBUG) Log.d("response", "error$message")
                     }
                 }
+
                 is Resources.Loading -> {
                 }
             }
@@ -282,7 +292,8 @@ class DiscoverFragment : Fragment(), java.io.Serializable {
         binding.recyclerDiscoverItem4.setHasFixedSize(true)
 
     }
-    fun fromVulgarFraction(number:String):Double {
+
+    fun fromVulgarFraction(number: String): Double {
         val items = number.split("""\d""".toRegex()).filterNot { it.isEmpty() }
         val mixed: String?
         val fraction = mutableListOf<String>()
@@ -300,6 +311,7 @@ class DiscoverFragment : Fragment(), java.io.Serializable {
             number.toDouble()
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

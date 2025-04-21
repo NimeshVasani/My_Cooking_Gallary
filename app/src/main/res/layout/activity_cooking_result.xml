@@ -154,7 +154,8 @@
                         android:id="@+id/img_thumbnail_view"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="8dp" />
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="play thumbnail" />
 
                     <ImageButton
                         android:id="@+id/btn_video_start"

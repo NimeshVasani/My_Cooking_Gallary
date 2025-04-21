@@ -11,6 +11,9 @@
         android:label="@string/title_discover"
         tools:layout="@layout/fragment_discover">
 
+        <action
+            android:id="@+id/action_navigation_discover_to_searchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
 
     <fragment
@@ -52,5 +55,13 @@
         <action
             android:id="@+id/action_cookingResult_to_navigation_discover3"
             app:destination="@id/navigation_discover" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="diamondcraft.devs.mycookinggallary.ui.search.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_cookingResult"
+            app:destination="@id/cookingResult" />
     </fragment>
 </navigation>
