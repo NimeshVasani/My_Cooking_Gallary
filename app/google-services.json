@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "688701518470",
+    "firebase_url": "https://family-time-ef015-default-rtdb.firebaseio.com",
+    "project_id": "family-time-ef015",
+    "storage_bucket": "family-time-ef015.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688701518470:android:9035aad0002319791b1707",
+        "android_client_info": {
+          "package_name": "com.dimondcrafts.devs.familytimes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhAhN2Y0PxZGaMnX2NxYzQD3KvnFT_OEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688701518470:android:1405da6894ddf5951b1707",
+        "android_client_info": {
+          "package_name": "com.nimesh.vasani.mywallpaperapp.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhAhN2Y0PxZGaMnX2NxYzQD3KvnFT_OEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688701518470:android:16858fba568a2d8b1b1707",
+        "android_client_info": {
+          "package_name": "diamondcraft.devs.mycookinggallary"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhAhN2Y0PxZGaMnX2NxYzQD3KvnFT_OEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
